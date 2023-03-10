@@ -1,0 +1,32 @@
+# Test for getting ALL subscribers
+GET http://localhost:3000/subscribers
+
+###
+
+#Test for getting a single subscriber
+GET http://localhost:3000/subscribers/640b263f79f5ee90e4c2f26c
+
+###
+
+#Test for Creating new subscriber
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "subscriberName": "John Doe",
+    "subscribedToChannel": "Pewdiepie"
+}
+
+###
+# Delete based on ID
+DELETE http://localhost:3000/subscribers/640b259a79f5ee90e4c2f263
+
+###
+# Updating a subscriber
+PATCH http://localhost:3000/subscribers/640b263f79f5ee90e4c2f26c
+Content-Type: application/json
+
+{
+    "subscriberName": "Jane Doe",
+    "subscribedToChannel": "MrBeast"
+}
